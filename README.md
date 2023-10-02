@@ -1,6 +1,6 @@
 # geofence-hopper
 
-This application mimics the tracking of Apple's "Search" application.
+This application mimics the tracking of Apple's "Find My" application.
 By hopping geofences, it allows tracking at intervals of about 150m with greatly reduced power consumption.
 
 ![スクリーンショット 2023-10-02 20 12 18](https://github.com/iototaku/geofence-hopper/assets/836698/66438cf3-5439-4b7e-8a9a-c10c44da9582)
