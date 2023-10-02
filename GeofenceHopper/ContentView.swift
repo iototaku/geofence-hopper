@@ -59,17 +59,14 @@ struct ContentView: View {
         }.ignoresSafeArea()
     }
     
-    func setCurrentLocation() {
-        if let location = locationHistories.sorted(by: { lh1, lh2 in
-            lh1.timestamp > lh2.timestamp
-        }).first {
-            region.center = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-        }
-    }
-    
     init(modelContext: ModelContext) {
         let viewModel = ViewModel(modelContext: modelContext)
         _viewModel = State(initialValue: viewModel)
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            // Handle the result
+        }
     }
 }
 
