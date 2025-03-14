@@ -14,7 +14,7 @@ struct GeofenceHopperApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(modelContext: container.mainContext)
+            LoginView()
         }.modelContainer(container)
     }
     
