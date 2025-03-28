@@ -28,6 +28,10 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
+            Rectangle()
+                .fill(Color.red)
+                .ignoresSafeArea()
+            
             Map {
                 MapPolyline(coordinates: locationHistories.map({
                     CLLocationCoordinate2D(latitude: $0.latitude, longitude: $0.longitude)
